@@ -1,6 +1,7 @@
 package com.example.fetch.api.product;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,7 +29,7 @@ public class Product {
     @Column(name = "image")
     private String image;
 
-    @Column(name = "rating")
+    @Embedded
     private Rating rating;
 
     public Long getId() {
